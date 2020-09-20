@@ -1,0 +1,24 @@
+{
+  "name": "cleasby-vigfusson-dictionary",
+  "version": "1.0.0",
+  "description": "The Cleasby & Vigfusson Old Norse to English Dictionary for Node.js",
+  "main": "index.js",
+  "repository": "https://github.com/stscoundrel/cleasby-vigfusson-dictionary.git",
+  "author": "stscoundrel <silvennoinen.sampo@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  }
+}
