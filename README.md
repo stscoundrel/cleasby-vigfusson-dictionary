@@ -16,16 +16,38 @@ Or just copy json source file from `/json` folder in source.
 
 The project provides a getter for the data. You can use it in your script to populate your own database or otherwise use the data.
 
+##### Default dictionary with formatting.
+
 ```javascript
 const { getDictionary } = require('cleasby-vigfusson-dictionary')
 
-// Whole dictionary as array.
+/**
+ * Whole dictionary as array.
+ * Contains <strong> and <i> HTML tags
+ * to match the layout of the printed book.
+ */
 const dictionary = getDictionary()
+
 
 // Get words starting with letter A
 const aWords = dictionary.filter((entry) => entry.word.charAt(0) === 'a')
 
 console.log(aWords)
+
+```
+
+##### Version without any markup.
+
+```javascript
+const { getNoMarkupDictionary } = require('cleasby-vigfusson-dictionary')
+
+// Same array, but no formatting with HTML tags.
+const dictionary = getNoMarkupDictionary()
+
+// Get words starting with letter B
+const bWords = dictionary.filter((entry) => entry.word.charAt(0) === 'b')
+
+console.log(bWords)
 
 ```
 
