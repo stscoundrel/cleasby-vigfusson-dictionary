@@ -1,0 +1,73 @@
+const { getDictionary, getNoMarkupDictionary } = require('../index.js')
+
+describe('Dictionary: with formatting', () => {
+  test('Returns dictionary in array format', () => {
+    const result = getDictionary()
+
+    expect(Array.isArray(result)).toBeTruthy()
+  })
+
+  test('Dictionary contains expected content', () => {
+    const result = getDictionary()
+
+    expect(result[1].word).toBe('abbadís')
+    expect(result[1].definitions[0]).toBe('f. <i>abbess.</i> Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
+
+    expect(result[30789].word).toBe('undaðr')
+    expect(result[1989].definitions[0]).toBe('n. a law term, <i>eatable things stolen,</i> Grág. ii. 192.')
+  })
+
+  test('Dictionary contains 35 207 words', () => {
+    const result = getDictionary()
+
+    expect(result.length).toBe(35207)
+  })
+})
+
+describe('Dictionary: without formatting', () => {
+  test('Returns dictionary in array format', () => {
+    const result = getNoMarkupDictionary()
+
+    expect(Array.isArray(result)).toBeTruthy()
+  })
+
+  test('Dictionary contains expected content', () => {
+    const result = getNoMarkupDictionary()
+
+    expect(result[1].word).toBe('abbadís')
+    expect(result[1].definitions[0]).toBe('f. abbess. Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
+
+    expect(result[30789].word).toBe('undaðr')
+    expect(result[1989].definitions[0]).toBe('n. a law term, eatable things stolen, Grág. ii. 192.')
+  })
+
+  test('Dictionary entries do not contain HTML markup.', () => {
+    const dictionary = getNoMarkupDictionary()
+
+    const html = ['<strong>', '</strong', '<i>', '</i>']
+
+    let hasHTML = false
+
+    dictionary.forEach((entry) => {
+      html.forEach((element) => {
+        if (entry.word.includes(element)) {
+          hasHTML = true
+        }
+
+        entry.definitions.forEach((definition) => {
+          if (definition.includes(element)) {
+            hasHTML = true
+          }
+        })
+      })
+    })
+
+    expect(hasHTML).toBeFalsy()
+  })
+
+  test('Dictionary contains 35 207 words', () => {
+    const result = getNoMarkupDictionary()
+
+    expect(result.length).toBe(35207)
+  })
+})
