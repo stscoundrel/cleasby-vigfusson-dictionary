@@ -104,3 +104,4 @@ dist
 .tern-port
 /test.js
 /debug.js
+.DS_Store
