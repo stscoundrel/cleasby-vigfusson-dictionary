@@ -22,6 +22,24 @@ describe('Dictionary: with formatting', () => {
 
     expect(result.length).toBe(35207)
   })
+
+  test('Dictionary does not contain malformatted numeral definitions', () => {
+    const dictionary = getDictionary()
+
+    const malformatted = ['<strong>1.</strong>', '<strong>2.</strong>', '<strong>3.</strong>']
+
+    let hasMalformatted = false
+
+    dictionary.forEach((entry) => {
+      entry.definitions.forEach(definition => {
+        if(malformatted.includes(definition)) {
+          hasMalformatted = true
+        }
+      })
+    })
+
+    expect(hasMalformatted).toBeFalsy()
+  })
 })
 
 describe('Dictionary: without formatting', () => {
@@ -69,5 +87,23 @@ describe('Dictionary: without formatting', () => {
     const result = getNoMarkupDictionary()
 
     expect(result.length).toBe(35207)
+  })
+
+  test('Dictionary does not contain malformatted numeral definitions', () => {
+    const dictionary = getNoMarkupDictionary()
+
+    const malformatted = ['1.', '2.', '3.']
+
+    let hasMalformatted = false
+
+    dictionary.forEach((entry) => {
+      entry.definitions.forEach(definition => {
+        if(malformatted.includes(definition)) {
+          hasMalformatted = true
+        }
+      })
+    })
+
+    expect(hasMalformatted).toBeFalsy()
   })
 })
