@@ -31,8 +31,8 @@ describe('Dictionary: with formatting', () => {
     let hasMalformatted = false
 
     dictionary.forEach((entry) => {
-      entry.definitions.forEach(definition => {
-        if(malformatted.includes(definition)) {
+      entry.definitions.forEach((definition) => {
+        if (malformatted.includes(definition)) {
           hasMalformatted = true
         }
       })
@@ -97,8 +97,8 @@ describe('Dictionary: without formatting', () => {
     let hasMalformatted = false
 
     dictionary.forEach((entry) => {
-      entry.definitions.forEach(definition => {
-        if(malformatted.includes(definition)) {
+      entry.definitions.forEach((definition) => {
+        if (malformatted.includes(definition)) {
           hasMalformatted = true
         }
       })
