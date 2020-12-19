@@ -10,11 +10,11 @@ describe('Dictionary: with formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getDictionary()
 
-    expect(result[1].word).toBe('abbadís')
-    expect(result[1].definitions[0]).toBe('f. <i>abbess.</i> Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
+    expect(result[1].word).toBe('-ærr')
+    expect(result[1].definitions[0]).toBe('adj. <i>-oared;</i> in compds.')
 
-    expect(result[30789].word).toBe('undaðr')
-    expect(result[1989].definitions[0]).toBe('n. a law term, <i>eatable things stolen,</i> Grág. ii. 192.')
+    expect(result[30789].word).toBe('troðningr')
+    expect(result[1989].definitions[0]).toBe('and <strong>ættbogi,</strong> a, m. <i>lineage,</i> Landn. 357, Eluc. 26, Stj. 425, Fms. i. 287, Post. 686 B. 14.')
   })
 
   test('Dictionary contains 35 207 words', () => {
@@ -40,6 +40,14 @@ describe('Dictionary: with formatting', () => {
 
     expect(hasMalformatted).toBeFalsy()
   })
+
+  test('Dictionary entries are alphabetically sorted', () => {
+    const maybeUnsorted = getDictionary()
+
+    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
+
+    expect(maybeUnsorted).toEqual(sortedDictionry)
+  })
 })
 
 describe('Dictionary: without formatting', () => {
@@ -52,11 +60,11 @@ describe('Dictionary: without formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getNoMarkupDictionary()
 
-    expect(result[1].word).toBe('abbadís')
-    expect(result[1].definitions[0]).toBe('f. abbess. Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
+    expect(result[1].word).toBe('-ærr')
+    expect(result[1].definitions[0]).toBe('adj. -oared; in compds.')
 
-    expect(result[30789].word).toBe('undaðr')
-    expect(result[1989].definitions[0]).toBe('n. a law term, eatable things stolen, Grág. ii. 192.')
+    expect(result[30789].word).toBe('troðningr')
+    expect(result[1989].definitions[0]).toBe('and ættbogi, a, m. lineage, Landn. 357, Eluc. 26, Stj. 425, Fms. i. 287, Post. 686 B. 14.')
   })
 
   test('Dictionary entries do not contain HTML markup.', () => {
@@ -105,5 +113,13 @@ describe('Dictionary: without formatting', () => {
     })
 
     expect(hasMalformatted).toBeFalsy()
+  })
+
+  test('Dictionary entries are alphabetically sorted', () => {
+    const maybeUnsorted = getNoMarkupDictionary()
+
+    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
+
+    expect(maybeUnsorted).toEqual(sortedDictionry)
   })
 })
