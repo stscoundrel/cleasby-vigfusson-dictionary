@@ -10,11 +10,11 @@ describe('Dictionary: with formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getDictionary()
 
-    expect(result[1].word).toBe('-ærr')
-    expect(result[1].definitions[0]).toBe('adj. <i>-oared;</i> in compds.')
+    expect(result[1].word).toBe('á')
+    expect(result[1].definitions[0]).toBe('interj. denoting wonder, doubt, or the like, <i>eh.</i>')
 
-    expect(result[30789].word).toBe('troðningr')
-    expect(result[1989].definitions[0]).toBe('and <strong>ættbogi,</strong> a, m. <i>lineage,</i> Landn. 357, Eluc. 26, Stj. 425, Fms. i. 287, Post. 686 B. 14.')
+    expect(result[30789].word).toBe('trolla-gangr')
+    expect(result[1989].definitions[0]).toBe('a, m. <i>a giver of wealth,</i> Lex. Poët.')
   })
 
   test('Dictionary contains 35 207 words', () => {
@@ -48,6 +48,20 @@ describe('Dictionary: with formatting', () => {
 
     expect(maybeUnsorted).toEqual(sortedDictionry)
   })
+
+  test('Dictionary entries do not start with dash (-)', () => {
+    const dictionary = getDictionary()
+
+    let hasDashStarts = false
+
+    dictionary.forEach((entry) => {
+      if (entry.word.charAt(0) === '-') {
+        hasDashStarts = true
+      }
+    })
+
+    expect(hasDashStarts).toBeFalsy()
+  })
 })
 
 describe('Dictionary: without formatting', () => {
@@ -60,11 +74,11 @@ describe('Dictionary: without formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getNoMarkupDictionary()
 
-    expect(result[1].word).toBe('-ærr')
-    expect(result[1].definitions[0]).toBe('adj. -oared; in compds.')
+    expect(result[1].word).toBe('á')
+    expect(result[1].definitions[0]).toBe('interj. denoting wonder, doubt, or the like, eh.')
 
-    expect(result[30789].word).toBe('troðningr')
-    expect(result[1989].definitions[0]).toBe('and ættbogi, a, m. lineage, Landn. 357, Eluc. 26, Stj. 425, Fms. i. 287, Post. 686 B. 14.')
+    expect(result[30789].word).toBe('trolla-gangr')
+    expect(result[1989].definitions[0]).toBe('a, m. a giver of wealth, Lex. Poët.')
   })
 
   test('Dictionary entries do not contain HTML markup.', () => {
@@ -121,5 +135,19 @@ describe('Dictionary: without formatting', () => {
     const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
 
     expect(maybeUnsorted).toEqual(sortedDictionry)
+  })
+
+  test('Dictionary entries do not start with dash (-)', () => {
+    const dictionary = getNoMarkupDictionary()
+
+    let hasDashStarts = false
+
+    dictionary.forEach((entry) => {
+      if (entry.word.charAt(0) === '-') {
+        hasDashStarts = true
+      }
+    })
+
+    expect(hasDashStarts).toBeFalsy()
   })
 })
