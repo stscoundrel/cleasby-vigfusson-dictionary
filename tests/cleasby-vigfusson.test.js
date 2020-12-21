@@ -1,3 +1,4 @@
+const { oldNorseSort } = require('old-norse-alphabet-sort')
 const { getDictionary, getNoMarkupDictionary } = require('../index.js')
 
 describe('Dictionary: with formatting', () => {
@@ -10,11 +11,11 @@ describe('Dictionary: with formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getDictionary()
 
-    expect(result[1].word).toBe('á')
-    expect(result[1].definitions[0]).toBe('interj. denoting wonder, doubt, or the like, <i>eh.</i>')
+    expect(result[1].word).toBe('abbadís')
+    expect(result[1].definitions[0]).toBe('f. <i>abbess.</i> Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
 
-    expect(result[30789].word).toBe('trolla-gangr')
-    expect(result[1989].definitions[0]).toBe('a, m. <i>a giver of wealth,</i> Lex. Poët.')
+    expect(result[30789].word).toBe('undan-eldi')
+    expect(result[1989].definitions[0]).toBe('m. <i>a glutton,</i> Germ. <i>freszbauch.</i>')
   })
 
   test('Dictionary contains 35 207 words', () => {
@@ -44,7 +45,8 @@ describe('Dictionary: with formatting', () => {
   test('Dictionary entries are alphabetically sorted', () => {
     const maybeUnsorted = getDictionary()
 
-    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
+    const sortedDictionry = [...maybeUnsorted].sort((a, b) => (
+      oldNorseSort(a.word.toLowerCase(), b.word.toLowerCase())))
 
     expect(maybeUnsorted).toEqual(sortedDictionry)
   })
@@ -74,11 +76,11 @@ describe('Dictionary: without formatting', () => {
   test('Dictionary contains expected content', () => {
     const result = getNoMarkupDictionary()
 
-    expect(result[1].word).toBe('á')
-    expect(result[1].definitions[0]).toBe('interj. denoting wonder, doubt, or the like, eh.')
+    expect(result[1].word).toBe('abbadís')
+    expect(result[1].definitions[0]).toBe('f. abbess. Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
 
-    expect(result[30789].word).toBe('trolla-gangr')
-    expect(result[1989].definitions[0]).toBe('a, m. a giver of wealth, Lex. Poët.')
+    expect(result[30789].word).toBe('undan-eldi')
+    expect(result[1989].definitions[0]).toBe('m. a glutton, Germ. freszbauch.')
   })
 
   test('Dictionary entries do not contain HTML markup.', () => {
@@ -132,7 +134,8 @@ describe('Dictionary: without formatting', () => {
   test('Dictionary entries are alphabetically sorted', () => {
     const maybeUnsorted = getNoMarkupDictionary()
 
-    const sortedDictionry = [...maybeUnsorted].sort((a, b) => a.word.localeCompare(b.word))
+    const sortedDictionry = [...maybeUnsorted].sort((a, b) => (
+      oldNorseSort(a.word.toLowerCase(), b.word.toLowerCase())))
 
     expect(maybeUnsorted).toEqual(sortedDictionry)
   })
