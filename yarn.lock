@@ -3077,10 +3077,10 @@ object.values@^1.1.1:
     function-bind "^1.1.1"
     has "^1.0.3"
 
-old-norse-alphabet-sort@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.0.0.tgz#7eda97ef85b2b3aea0c9a756bca359cbb2aaec3a"
-  integrity sha512-zy4sCR8Z+pD34J9lBWZltTSwdpoKmDazBw6UgdwdatNijxsqkbcqE3kC4n2RAe0Jf/PGVomSNAXQ0uUIm44MjQ==
+old-norse-alphabet-sort@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.0.2.tgz#a0f80cda4cebbac6a5e306828b5f5728d0719dbc"
+  integrity sha512-lZrlDyaiwhZawE2itr1z9Zw7c7cTBxk65Tx4h1Z0eN7jTLo/0NzcUrJDXe47o59qgmXqfYdCpJMnmiDAla6Qww==
   dependencies:
     old-norse-alphabet "^1.0.1"
 

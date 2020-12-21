@@ -1,6 +1,6 @@
 {
   "name": "cleasby-vigfusson-dictionary",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "The Cleasby & Vigfusson Old Norse to English Dictionary for Node.js",
   "main": "index.js",
   "repository": "https://github.com/stscoundrel/cleasby-vigfusson-dictionary.git",
@@ -17,7 +17,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^23.20.0",
     "jest": "^26.4.2",
-    "old-norse-alphabet-sort": "^1.0.0"
+    "old-norse-alphabet-sort": "^1.0.2"
   },
   "scripts": {
     "lint": "eslint .",

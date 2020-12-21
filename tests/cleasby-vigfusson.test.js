@@ -14,8 +14,8 @@ describe('Dictionary: with formatting', () => {
     expect(result[1].word).toBe('abbadís')
     expect(result[1].definitions[0]).toBe('f. <i>abbess.</i> Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
 
-    expect(result[30789].word).toBe('undan-eldi')
-    expect(result[1989].definitions[0]).toBe('m. <i>a glutton,</i> Germ. <i>freszbauch.</i>')
+    expect(result[30789].word).toBe('undan-bragð')
+    expect(result[1989].definitions[0]).toBe('adj. <i>greedy, voracious,</i> Hkv. 2. 41.')
   })
 
   test('Dictionary contains 35 207 words', () => {
@@ -46,7 +46,7 @@ describe('Dictionary: with formatting', () => {
     const maybeUnsorted = getDictionary()
 
     const sortedDictionry = [...maybeUnsorted].sort((a, b) => (
-      oldNorseSort(a.word.toLowerCase(), b.word.toLowerCase())))
+      oldNorseSort(a.word, b.word)))
 
     expect(maybeUnsorted).toEqual(sortedDictionry)
   })
@@ -79,8 +79,8 @@ describe('Dictionary: without formatting', () => {
     expect(result[1].word).toBe('abbadís')
     expect(result[1].definitions[0]).toBe('f. abbess. Hkr. iii. 398, Fms. vii. 239, Gþl. 365.')
 
-    expect(result[30789].word).toBe('undan-eldi')
-    expect(result[1989].definitions[0]).toBe('m. a glutton, Germ. freszbauch.')
+    expect(result[30789].word).toBe('undan-bragð')
+    expect(result[1989].definitions[0]).toBe('adj. greedy, voracious, Hkv. 2. 41.')
   })
 
   test('Dictionary entries do not contain HTML markup.', () => {
@@ -135,7 +135,7 @@ describe('Dictionary: without formatting', () => {
     const maybeUnsorted = getNoMarkupDictionary()
 
     const sortedDictionry = [...maybeUnsorted].sort((a, b) => (
-      oldNorseSort(a.word.toLowerCase(), b.word.toLowerCase())))
+      oldNorseSort(a.word, b.word)))
 
     expect(maybeUnsorted).toEqual(sortedDictionry)
   })
