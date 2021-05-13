@@ -3223,9 +3223,9 @@ object.values@^1.1.1:
     has "^1.0.3"
 
 old-norse-alphabet-sort@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.1.0.tgz#8d14bff851cae69c10a0c9c2acc8f31fd69c770c"
-  integrity sha512-UpnHN6shzW3os2snO9MIcxtJFASIGHvKiCAMSMHOemvfg5aHXqxCqoNJa4uEKT5+tOQ9ABcza29hvJqywnEWyA==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.1.1.tgz#d46f4eb1e2e2a07310cd4e44de6f542f4b9066ea"
+  integrity sha512-CKFZbwse3hn8JJKXc/GZTaHL0ePJVfsz9qD0g0Tq14UNQNcK3HcRupuLZZGih4lEVZLRmfeF2Fuj7tT/atqEiQ==
   dependencies:
     old-norse-alphabet "^1.1.0"
 
