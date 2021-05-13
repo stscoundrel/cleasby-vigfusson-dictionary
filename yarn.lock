@@ -3078,16 +3078,16 @@ object.values@^1.1.1:
     has "^1.0.3"
 
 old-norse-alphabet-sort@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.0.2.tgz#a0f80cda4cebbac6a5e306828b5f5728d0719dbc"
-  integrity sha512-lZrlDyaiwhZawE2itr1z9Zw7c7cTBxk65Tx4h1Z0eN7jTLo/0NzcUrJDXe47o59qgmXqfYdCpJMnmiDAla6Qww==
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.1.0.tgz#8d14bff851cae69c10a0c9c2acc8f31fd69c770c"
+  integrity sha512-UpnHN6shzW3os2snO9MIcxtJFASIGHvKiCAMSMHOemvfg5aHXqxCqoNJa4uEKT5+tOQ9ABcza29hvJqywnEWyA==
   dependencies:
-    old-norse-alphabet "^1.0.1"
+    old-norse-alphabet "^1.1.0"
 
-old-norse-alphabet@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/old-norse-alphabet/-/old-norse-alphabet-1.0.1.tgz#657b4ce1a8e51ad4120d47b8480b50806d2e9057"
-  integrity sha512-pwWJL2xlxSymaxges1Yu6kNbjvdvupEgqRyRy2qpDSvtj2fkMMUmgS3tmgkgIvl62BjmWUsbxeO8DG1uy4k/4g==
+old-norse-alphabet@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/old-norse-alphabet/-/old-norse-alphabet-1.1.0.tgz#1a5fbc456af293199b4c9f3e8505c6e1c3bc3e4c"
+  integrity sha512-Ug2FK89e99nZ/dQTBWquYhufI+320zfHFudD9treT2qivmFRZDGJX7RM/qoDO3QFsF4RgsI/qN1hzFDDz7MGNw==
 
 once@^1.3.0, once@^1.3.1, once@^1.4.0:
   version "1.4.0"
