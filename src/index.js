@@ -1,4 +1,4 @@
-const { read } = require('./services/reader.js')
+const { read } = require('./services/reader')
 const { CLEASBY_VIGFUSSON_JSON, NO_MARKUP_JSON } = require('./constants/paths')
 
 const getDictionary = () => {

@@ -1,5 +1,5 @@
 const { oldNorseSort } = require('old-norse-alphabet-sort')
-const { getDictionary, getNoMarkupDictionary } = require('../index.js')
+const { getDictionary, getNoMarkupDictionary } = require('../index')
 
 describe('Dictionary: with formatting', () => {
   test('Returns dictionary in array format', () => {
