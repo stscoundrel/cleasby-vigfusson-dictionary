@@ -1,6 +1,6 @@
 {
   "name": "cleasby-vigfusson-dictionary",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "The Cleasby & Vigfusson Old Norse to English Dictionary for Node.js",
   "main": "index.js",
   "repository": "https://github.com/stscoundrel/cleasby-vigfusson-dictionary.git",
