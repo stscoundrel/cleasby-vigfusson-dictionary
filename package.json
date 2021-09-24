@@ -17,7 +17,7 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-jest": "^24.4.2",
     "jest": "^27.2.1",
-    "old-norse-alphabet-sort": "^1.1.7"
+    "old-norse-alphabet-sort": "^1.1.8"
   },
   "scripts": {
     "lint": "eslint .",
