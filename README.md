@@ -2,12 +2,14 @@
 
 The Cleasby &amp; Vigfusson Old Norse to English Dictionary for Node.js. The dictionary consists of 35 000+ Old Norse words with English translations.
 
-Based on the classic dictionary by Richard Cleasby and Gudbrand Vigfusson.
+Based on the classic dictionary by Richard Cleasby and Gudbrand Vigfusson. If you find this one too abbreviated, academic or hard to read, you might want to check out [A Concise Dictionary of Old Icelandic](https://github.com/stscoundrel/old-icelandic-zoega)
 
 Related projects:
 - [Cleasby & Vigfusson Dictionary in Next.js](https://github.com/stscoundrel/cleasby-vigfusson-next).
 - [Cleasby & Vigfusson Abbreviations](https://github.com/stscoundrel/cleasby-vigfusson-abbreviations).
 - [Cleasby & Vigfusson Gatsby Source Plugin](https://github.com/stscoundrel/gatsby-source-cleasby-vigfusson)
+- [Python version of the library](https://github.com/stscoundrel/old-norse-dictionary-py)
+- [Rust version of the library](https://github.com/stscoundrel/cleasby-vigfusson-dictionary-rs)
 
 
 ### Install
@@ -16,8 +18,13 @@ Related projects:
 
 Or just copy json source file from `/json` folder in source.
 
+#### Usage with TypeScript
 
-### Use JSON files programmatically
+The dictionary has types available via [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)
+
+`yarn add @types/cleasby-vigfusson-dictionary`
+
+#### Use JSON files programmatically
 
 The project provides a getter for the data. You can use it in your script to populate your own database or otherwise use the data.
 
@@ -60,8 +67,8 @@ Individual words are returned in format of:
 
 ```javascript
 {
-    word: String
-    definitions: [String]
+    word: string
+    definitions: string[]
 }
 ```
 
