@@ -1,4 +1,4 @@
-name: JavaScript - CI
+name: CI - Test & lint
 
 on: [pull_request]
 
