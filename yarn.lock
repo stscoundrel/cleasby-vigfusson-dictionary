@@ -2709,9 +2709,9 @@ object.values@^1.1.5:
     es-abstract "^1.19.1"
 
 old-norse-alphabet-sort@^1.1.8:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.1.9.tgz#b84d0c2602144c111040726de5670301279f1649"
-  integrity sha512-Oi2p3nd6mt69oUmI2GDmG62+/OC7D8omS+P7E289KdMaxkTT8vKlBwkGY6c5YzkfYkw8u8yydW4m2zuoGhDETg==
+  version "1.1.10"
+  resolved "https://registry.yarnpkg.com/old-norse-alphabet-sort/-/old-norse-alphabet-sort-1.1.10.tgz#21eb366bdac5631086ec6c0193dd0481b1245e7a"
+  integrity sha512-KeZr8Hw/GSAk9fPzRhd+aWOMWgKxXwjH5eXtSLwtOb4NhJfads0Dm5DEaf2qPSQsx85ItB+i9a/xndcOY8VDug==
   dependencies:
     old-norse-alphabet "^1.1.2"
 
