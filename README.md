@@ -8,8 +8,11 @@ Related projects:
 - [Cleasby & Vigfusson Dictionary in Next.js](https://github.com/stscoundrel/cleasby-vigfusson-next).
 - [Cleasby & Vigfusson Abbreviations](https://github.com/stscoundrel/cleasby-vigfusson-abbreviations).
 - [Cleasby & Vigfusson Gatsby Source Plugin](https://github.com/stscoundrel/gatsby-source-cleasby-vigfusson)
-- [Python version of the library](https://github.com/stscoundrel/old-norse-dictionary-py)
-- [Rust version of the library](https://github.com/stscoundrel/cleasby-vigfusson-dictionary-rs)
+
+Other language ports:
+- [Python](https://github.com/stscoundrel/old-norse-dictionary-py)
+- [Rust](https://github.com/stscoundrel/cleasby-vigfusson-dictionary-rs)
+- [C# / .NET](https://github.com/stscoundrel/old-norse-dictionary-cs)
 
 
 ### Install
