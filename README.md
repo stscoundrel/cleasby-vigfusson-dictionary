@@ -13,6 +13,8 @@ Other language ports:
 - [Python](https://github.com/stscoundrel/old-norse-dictionary-py)
 - [Rust](https://github.com/stscoundrel/cleasby-vigfusson-dictionary-rs)
 - [C# / .NET](https://github.com/stscoundrel/old-norse-dictionary-cs)
+- [Scala / Java / JVM](https://github.com/stscoundrel/old-norse-dictionary-scala)
+- [Go](https://github.com/stscoundrel/old-norse-dictionary-go)
 
 
 ### Install
