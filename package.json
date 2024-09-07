@@ -22,7 +22,7 @@
   "scripts": {
     "lint": "eslint .",
     "fix": "eslint . --fix",
-    "test": "jest --verbose --runInBand --passWithNoTests",
+    "test": "jest --verbose --passWithNoTests",
     "prepublishOnly": "npm test"
   }
 }
